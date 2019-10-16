@@ -20,12 +20,11 @@ import javax.swing.*;
  */
 public class TreePanel extends JPanel {
 
-    private int h = 10;
+    private int h = 30;
     private int dx = 200;
     private int dy = 50;
     private Dimension screenSize;
     private Node root;
-    private int counter;
 
     public TreePanel(Node root) {
         this.root = root;
@@ -45,7 +44,6 @@ public class TreePanel extends JPanel {
 
     @Override
     public void paint(Graphics g) {
-        counter = 0;
         int x = screenSize.width / 2;
         int y = 15;
         int color_rgb = 55;
@@ -59,7 +57,7 @@ public class TreePanel extends JPanel {
         g2d.fillOval(x, y, h, h);
         g2d.setColor(new Color(color_rgb, color_rgb, color_rgb));
         g2d.drawString("Корень " + root.getMessage(), x + 10, y);
-        counter++;
+
         drawNode(g2d, root, x, y, dx);
     }
 

@@ -5,32 +5,31 @@
 package iad_1;
 
 /**
- *
  * @author Sasha
  */
 public class Value {
 
     public static int[] LEGS = {0, 2, 4, 5, 6, 8};
     public static String[] messages = {
-        "is Hair",
-        "is Feathers",
-        "is Eggs",
-        "is Milk",
-        "is Airborne",
-        "is Aquatic",
-        "is Predator",
-        "is Toothed",
-        "is Backbone",
-        "is Breathes",
-        "is Venomonus",
-        "is Fins",
-        "is <= 2 legs",
-        "is <= 4 legs",
-        "is <= 5 legs",
-        "is <= 6 legs",
-        "is Tail",
-        "is Domestic",
-        "is Catsize"
+            "is Hair",
+            "is Feathers",
+            "is Eggs",
+            "is Milk",
+            "is Airborne",
+            "is Aquatic",
+            "is Predator",
+            "is Toothed",
+            "is Backbone",
+            "is Breathes",
+            "is Venomonus",
+            "is Fins",
+            "is <= 2 legs",
+            "is <= 4 legs",
+            "is <= 5 legs",
+            "is <= 6 legs",
+            "is Tail",
+            "is Domestic",
+            "is Catsize"
     };
     private String animal_name;
     private Boolean hair;
@@ -149,6 +148,55 @@ public class Value {
 
     @Override
     public String toString() {
-        return "Value{" + "animal_name=" + animal_name + ", hair=" + hair + ", feathers=" + feathers + ", eggs=" + eggs + ", milk=" + milk + ", airborne=" + airborne + ", aquatic=" + aquatic + ", predator=" + predator + ", toothed=" + toothed + ", backbone=" + backbone + ", breathes=" + breathes + ", venomous=" + venomous + ", fins=" + fins + ", legs=" + legs + ", tail=" + tail + ", domestic=" + domestic + ", catsize=" + catsize + ", type=" + type + '}';
+        StringBuilder sb = new StringBuilder(animal_name + ": ");
+        sb.append("legs: ").append(legs).append(", ");
+        if (hair) {
+            sb.append("hair, ");
+        }
+        if (feathers) {
+            sb.append("feathers, ");
+        }
+        if (eggs) {
+            sb.append("eggs, ");
+        }
+        if (milk) {
+            sb.append("milk, ");
+        }
+        if (airborne) {
+            sb.append("airborne, ");
+        }
+        if (aquatic) {
+            sb.append("aquatic, ");
+        }
+        if (predator) {
+            sb.append("predator, ");
+        }
+        if (toothed) {
+            sb.append("toothed, ");
+        }
+        if (backbone) {
+            sb.append("backbone, ");
+        }
+        if (breathes) {
+            sb.append("breathes, ");
+        }
+        if (venomous) {
+            sb.append("venomous, ");
+        }
+        if (fins) {
+            sb.append("fins, ");
+        }
+        if (tail) {
+            sb.append("tail, ");
+        }
+        if (domestic) {
+            sb.append("domestic, ");
+        }
+        if (catsize) {
+            sb.append("catsize, ");
+        }
+        sb.append("type: ").append(type);
+
+        return sb.toString();
     }
 }
